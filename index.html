@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Pipeline MIPS</title>
+  <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Simulador de Pipeline MIPS</h1>
+
+    <div class="estagios-pipeline">
+      <div class="estagio"
+           id="if-estagio">
+        <h3>IF</h3>
+        <div class="caixa-instrucao"></div>
+      </div>
+      <div class="estagio"
+           id="id-estagio">
+        <h3>ID</h3>
+        <div class="caixa-instrucao"></div>
+      </div>
+      <div class="estagio"
+           id="ex-estagio">
+        <h3>EX</h3>
+        <div class="caixa-instrucao"></div>
+      </div>
+      <div class="estagio"
+           id="mem-estagio">
+        <h3>MEM</h3>
+        <div class="caixa-instrucao"></div>
+      </div>
+      <div class="estagio"
+           id="wb-estagio">
+        <h3>WB</h3>
+        <div class="caixa-instrucao"></div>
+      </div>
+    </div>
+
+
+    <div class="controles">
+      <button id="next-cycle">Próximo Ciclo</button>
+      <button id="run">Executar</button>
+      <button id="reset">Resetar</button>
+    </div>
+
+    <div class="tela-estado">
+      <div class="registradores">
+        <h3>Registradores</h3>
+        <div id="registradores-list"></div>
+      </div>
+      <div class="memoria">
+        <h3>Memória</h3>
+        <div id="memoria-list"></div>
+      </div>
+      <div class="predicao-branch">
+        <h3>Preditor de Branch</h3>
+        <div id="predicao-branch"></div>
+      </div>
+    </div>
+
+    <div class="entrada-programa">
+      <h3>Programa</h3>
+      <input type="file"
+             id="file-input"
+             accept=".json" />
+    </div>
+
+  </div>
+  <script src="pipeline.js"></script>
+</body>
+
+</html>
