@@ -1,0 +1,19 @@
+{
+   "program": [
+      "add $s0, $s0, $s1",
+      "mul $s2, $s0, $s3",
+      "sub $s4, $s4, $s2",
+      "beq $s4, $zero, loop",
+      "j end",
+      "loop: add $s1, $s1, $s1",
+      "j start",
+      "end: nop",
+      "start: nop"
+   ],
+   "registradores": {
+      "$s0": 1,
+      "$s1": 2,
+      "$s3": 3,
+      "$s4": 10
+   }
+}

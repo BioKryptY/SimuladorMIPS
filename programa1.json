@@ -1,0 +1,23 @@
+{
+   "program": [
+      "add $s1, $s2, $s3",
+      "mul $s4, $s1, $s5",
+      "lw $s6, 0($s7)",
+      "sw $s6, 4($s7)",
+      "beq $s1, $s4, target",
+      "sub $s2, $s2, $s2",
+      "j end",
+      "target: mul $s3, $s3, $s3",
+      "end: nop"
+   ],
+   "registradores": {
+      "$s2": 5,
+      "$s3": 3,
+      "$s5": 2,
+      "$s7": 100
+   },
+   "memoria": {
+      "100": 42,
+      "104": 0
+   }
+}

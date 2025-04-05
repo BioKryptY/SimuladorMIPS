@@ -1,0 +1,18 @@
+{
+   "program": [
+      "lw $s1, 0($s0)",
+      "lw $s2, 4($s0)",
+      "mul $s3, $s1, $s2",
+      "sw $s3, 8($s0)",
+      "j end",
+      "end: nop"
+   ],
+   "registradores": {
+      "$s0": 0
+   },
+   "memoria": {
+      "0": 5,
+      "4": 3,
+      "8": 0
+   }
+}
